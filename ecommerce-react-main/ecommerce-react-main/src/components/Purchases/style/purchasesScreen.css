@@ -1,0 +1,112 @@
+.purchases{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 0 auto;
+    margin-top: 30px;
+    justify-content: center;
+    height: 100%;
+}
+.purchases__routes{
+    display: flex;
+    gap: 10px;align-items: center;
+    color: #535353;
+}
+.purchases__routes-btn{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+}
+.purchases__title{
+    color: #535353;
+    font-weight: 700;
+}
+.purchases__container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.purchase{
+    width: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+.purchase__title-container{
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+.purchase__title{
+    font-size: 1rem;
+    font-weight: 700;
+    color: #535353;
+}
+.product-purchase{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 20px;
+    padding: 20px;
+}
+.product-purchase__container{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    gap: 5%;
+    align-items: center;
+}
+.product-purchase__title{
+    font-size: 0.7rem;
+    width: 60%;
+    color: #535353;
+}
+.product-purchase__quantity-container{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    padding: 3px;
+    width: 15%;
+}
+.product-purchase__quantity-title{
+    font-size: 0.8rem;
+    color: #535353;
+}
+.product-purchase__price{
+    color: #535353;
+    font-size: 0.8em;
+    width: 20%;
+}
+@media screen and (min-width: 720px) {
+    .purchases{
+        width: 60%;
+        margin-bottom: 30px;
+    }
+    .purchase__title-container{
+        padding: 15px 30px;
+    }
+    .purchase__title{
+        font-size: 1.1rem;
+    }
+    .product-purchase__container{
+        padding: 30px;
+    }
+    .product-purchase__title{
+        font-size: 1rem;
+        width: 70%;
+    }
+    .product-purchase__quantity-container{
+        padding: 10px 10px;
+        width: 10%;
+
+    }
+    .product-purchase__quantity-title{
+        font-size: 1.1rem;
+    }
+    .product-purchase__price{
+        font-size: 1.1rem;
+        width: 15%;
+        text-align: center;
+    }
+}

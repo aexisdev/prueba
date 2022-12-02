@@ -1,0 +1,298 @@
+.container{
+    padding-top: 50px;
+    width: 100%;
+    display: flex;
+}
+aside{
+    display: none;
+}
+.main-container{
+    width: 100%;
+}
+.products-container{
+    padding: var(--padding-mobile);
+    padding-top: 50px;
+    display: grid;
+    justify-items: center;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.card-product{
+    width: min(100%, 300px);
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+}
+.card-product__header{
+    height: 200px;
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+.card-product__header:hover .card-product__img{
+    transition: opacity 400ms ease-out;
+    opacity: 0;
+
+}
+.card-product__header:hover .card-product__img-back{
+    opacity: 1;
+    transition: opacity 400ms ease-out;
+
+}
+.card-product__img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 400ms ease-out;
+}
+.card-product__img-back{
+    position: absolute;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    object-fit: contain;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 400ms ease-out;
+}
+.card-product__body{
+    padding: 20px;
+    padding-bottom: 40px;
+    position: relative;
+}
+.card-product__title{
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    height: 42px;
+}
+.card-product__price-label{
+    font-size: 0.8rem;
+    color: #888a;
+    position: relative;
+    left: -5px;
+    margin-bottom: 3px;
+}
+.card-product__price-number{
+    font-size: 1rem;
+    font-weight: 700;
+}
+.card-product__btn{
+    position: absolute;
+    right: 20px;
+    bottom: 30px;
+    width: 48px;
+    aspect-ratio: 1;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+}
+.form__home{
+    width: 100%;
+    display: flex;
+    padding: 0 20px;
+    justify-content: center;
+}
+.form__home-input{
+    width: 75%;
+    border: 1px solid var(--border-color);
+    font-size: 1rem;
+    padding: 10px;
+}
+.form__home-input:focus, .input-price__form-input:focus{
+    outline: none;
+}
+.form__home-btn{
+    width: 25%;
+    background-color: var(--secondary-color);
+    border: none;
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+.form__home-btn:hover{
+    cursor: pointer;
+    filter: brightness(1.3);
+}
+.filter-navbar{
+    width: min(100%, 300px);
+    position: fixed;
+    background-color: var(--primary-color);
+    height: 100vh;
+    right: 0;
+    top: 0;
+    padding-top: 80px;
+    box-shadow: 0 0 20px 0 #0009;
+    transition: transform 600ms ease;
+    transform: translateX(105%);
+    z-index: 4;
+}
+.filter-navbar__open{
+    transition: transform 600ms ease;
+    transform: translateX(0);
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px;
+    width: 100%;
+}
+.input-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+.input-container__title{
+    display: flex; justify-content: space-between;
+}
+.input__title{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.input-price__form{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    align-items: end;
+}
+.input-price__container-form{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.input-price__form-input{
+    width: 70%;
+    font-size: 1rem;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    color: #494747;
+}
+.input-price__container-principal{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: end;
+    position: relative;
+    opacity: 0;
+    background-color: var(--primary-color);
+    transition: transform 800ms ease-out, opacity 1000ms ease;
+    transform: translateY(-10%);
+}
+.input-price__container-principal-open{
+    transition: transform 1.5s ease, opacity 1000ms ease;
+    transform: translateY(0%);
+    opacity: 1;
+}
+.input-price__label{
+    width: 20%;
+}
+.input-price__btn{
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.input-container__category{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    opacity: 0;
+    background-color: var(--primary-color);
+    transition: transform 1500ms ease-out, opacity 1000ms ease;
+    transform: translateY(-10%);
+}
+.input-container__category-open{
+    transition: transform 1500ms ease, opacity 1000ms ease;
+    transform: translateY(0%);
+    opacity: 1;
+}
+.input-category__container{
+    cursor: pointer;
+}
+.input-category__name{
+    font-size: 1rem;
+    color: #494747;
+}
+.input-container__title{
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px;
+}
+.btn-filter{
+    border: none;
+    background-color: transparent;
+    color: #7c7777;
+    position: absolute;
+    right: 20px;
+    padding: 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.container-form__name{
+    position: relative;
+}
+.btn-filter__close{
+    font-size: 1.5rem;
+    color: #7c7777;
+    cursor: pointer;
+    position: relative;
+    left: 90%;
+}
+.icon-open, .icon-close{
+    cursor: pointer;
+}
+@media screen and (min-width: 720px) {
+    .container{
+        padding-top: 50px;
+        width: 100%;
+        display: flex;
+    }
+    aside{
+        width: 20%;
+        height: 100vh;
+        display: block;
+    }
+    .main-container{
+        width: 80%;
+    }
+    .form__home{
+        width: 100%;
+        display: flex;
+        padding: 0 20px;
+        justify-content: center;
+    }
+    .form__home-input{
+        width: 75%;
+        border: 1px solid var(--border-color);
+        font-size: 1rem;
+        padding: 10px;
+    }
+    .form__home-btn{
+        width: 10%;
+        background-color: var(--secondary-color);
+        border: none;
+        font-size: 1rem;
+        color: var(--primary-color);
+        font-weight: 500;
+    }
+    .form__home-btn:hover{
+        cursor: pointer;
+        filter: brightness(1.3);
+    }
+    .filter-navbar{
+        display: none;
+    }
+    .btn-filter{
+        display: none;
+    }
+}
